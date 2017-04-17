@@ -1,0 +1,23 @@
+{
+  "name": "csgo-musicsync",
+  "version": "1.0.0",
+  "description": "Will automatically press the system play/pause button when you are dead/alive in csgo",
+  "main": "index.js",
+  "dependencies": {
+    "robotjs": "^0.4.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gseddon/csgo-musicsync.git"
+  },
+  "author": "gseddon",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/gseddon/csgo-musicsync/issues"
+  },
+  "homepage": "https://github.com/gseddon/csgo-musicsync#readme"
+}
