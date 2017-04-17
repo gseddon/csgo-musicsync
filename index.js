@@ -1,7 +1,7 @@
 'use strict';
 
 console.log('CSGO Gamestate Integration Music Player starting...');
-
+var robot = require("robotjs");
 const http = require('http');
 
 let shouldPlay = true;
@@ -42,15 +42,19 @@ function statusUpdate (data) {
     - in menu
     - dead
   */
+    // (data.player.state.health === 0 || data.player.steamid !== data.provider.steamid) // dead
 
   if (
     (data.player && data.player.activity === 'menu') || // menu
-    (data.player.state.health === 0 || data.player.steamid !== data.provider.steamid) // dead
+    (data.player.state.health === 0) // dead
   ) {
     shouldPlay = true;
     playerDead = true;
+    robot.keyTap("audio_play");
+
   } else {
     shouldPlay = false;
     playerDead = false;
+    robot.keyTap("audio_pause");
   }
 }
